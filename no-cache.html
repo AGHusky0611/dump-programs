@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>No Cache Demo - IT/CS 312L</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+</head>
+<body>
+    <h1>🚫 Cache-Control Demo</h1>
+    <p>This page should never be cached by browsers or proxies.</p>
+    <p>Current time: <span id="time"></span></p>
+    <p><a href="index.html">← Back to main page</a></p>
+    
+    <script>
+        document.getElementById('time').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>

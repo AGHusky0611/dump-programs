@@ -1,0 +1,7 @@
+{
+    "resource": "content-negotiation-demo",
+    "format": "json",
+    "message": "This is the JSON representation of the resource",
+    "timestamp": "2024-01-01T12:00:00Z",
+    "description": "Server returned this because your Accept header prefers application/json"
+}

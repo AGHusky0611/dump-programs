@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT/CS 312L HTTP Lab Practice</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .demo-section { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        h2 { color: #333; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>🚀 IT/CS 312L HTTP Features Lab</h1>
+    <p>Use this site to practice for your practical examination</p>
+    
+    <div class="demo-section">
+        <h2>1. Authentication Demo</h2>
+        <p><a href="protected.html">Access Protected Page</a> (Username: student1, Password: password123)</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>2. Cache-Control Demo</h2>
+        <p><a href="no-cache.html">No-Cache Page</a> | <a href="test.jpg">Cached Image</a></p>
+    </div>
+
+    <div class="demo-section">
+        <h2>3. Compression Demo</h2>
+        <p>View this page's headers to see gzip compression</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>4. Conditional Requests Demo</h2>
+        <p>Use curl with If-Modified-Since or If-None-Match headers on this page</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>5. Content Negotiation Demo</h2>
+        <p><a href="resource">Access Resource</a> (Returns HTML or JSON based on Accept header)</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>6. Range Requests Demo</h2>
+        <p><a href="sample.pdf">Sample PDF</a> (Test with Range headers)</p>
+    </div>
+
+    <hr>
+    <h3>Testing Commands Reference:</h3>
+    <pre>
+
+# Authentication
+curl -u student1:password123 http://yoursite/protected.html
+
+# Cache Headers
+curl -I http://yoursite/no-cache.html
+curl -I http://yoursite/test.jpg
+
+# Compression
+curl -I -H "Accept-Encoding: gzip" http://yoursite/
+
+# Content Negotiation
+curl -H "Accept: application/json" http://yoursite/resource
+
+# Range Requests
+curl -I -H "Range: bytes=0-99" http://yoursite/sample.pdf
+    </pre>
+    
+</body>
+</html>
